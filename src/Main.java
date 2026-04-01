@@ -1,35 +1,11 @@
-class Mobile {
-    String brand;
-    int price;
-    static String name;
-
-    public Mobile() {
-        brand = "";
-        price = 200;
-        System.out.println("in constructor");
-    }
-
-    static {
-        name = "Phone";
-        System.out.println("in static block");
-    }
-
-    public void show() {
-        System.out.println("Brand: " + brand + ", Price: " + price + ", Name: " + name);
-    }
-
-}
-
 public class Main {
     public static void main(String[] args) {
-
-        Mobile obj = new Mobile();
-        obj.brand = "Apple";
-        obj.price = 2000;
-        obj.name = "SmartPhone";
-
-        Mobile obj2 = new Mobile();
+        AdvCalc obj = new AdvCalc();
+        int r1 = obj.add(8, 2);
+        int r2 = obj.sub(5, 2);
+        int r3 = obj.multiply(3, 2);
+        int r4 = obj.multiply(4, 2);
+        System.out.println(r1 + " " + r2  + " " + r3 + " " + r4);
 
     }
-
 }

@@ -3,12 +3,19 @@ class Mobile {
     int price;
     static String name;
 
-    public void show() {
-        System.out.println("Brand: " + brand + ", Price: " + price + ", Name: " + name);
+    public Mobile() {
+        brand = "";
+        price = 200;
+        System.out.println("in constructor");
     }
 
-    public static void show1(Mobile obj) {
-        System.out.println("Brand: " + obj.brand + ", Price: " + obj.price + ", Name: " + name);
+    static {
+        name = "Phone";
+        System.out.println("in static block");
+    }
+
+    public void show() {
+        System.out.println("Brand: " + brand + ", Price: " + price + ", Name: " + name);
     }
 
 }
@@ -22,18 +29,7 @@ public class Main {
         obj.name = "SmartPhone";
 
         Mobile obj2 = new Mobile();
-        obj2.brand = "Samsung";
-        obj2.price = 1000;
-        obj2.name = "SmartPhone";
 
-        obj.name = "Foldable";
-        obj2.name = "Mobile";
-        Mobile.name = "NewMobile";
-
-        obj.show();
-        obj2.show();
-
-        Mobile.show1(obj);
     }
 
 }

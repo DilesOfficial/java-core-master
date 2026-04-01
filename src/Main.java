@@ -7,6 +7,10 @@ class Mobile {
         System.out.println("Brand: " + brand + ", Price: " + price + ", Name: " + name);
     }
 
+    public static void show1(Mobile obj) {
+        System.out.println("Brand: " + obj.brand + ", Price: " + obj.price + ", Name: " + name);
+    }
+
 }
 
 public class Main {
@@ -28,6 +32,8 @@ public class Main {
 
         obj.show();
         obj2.show();
+
+        Mobile.show1(obj);
     }
 
 }
